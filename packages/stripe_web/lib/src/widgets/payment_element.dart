@@ -117,9 +117,23 @@ class PaymentElementState extends State<PaymentElement> {
           else
             element?.blur(); */
         },
-        child: ConstrainedBox(
-          constraints: constraints,
-          child: const HtmlElementView(viewType: 'stripe_payment_element'),
+        child: Column(
+          children: [
+            ConstrainedBox(
+              constraints: constraints,
+              child: const HtmlElementView(viewType: 'stripe_payment_element'),
+            ),
+            GestureDetector(
+              onTap: () {
+
+              },
+              child: Container(
+                color: Colors.blue,
+                width: 300,
+                height: 70,
+                child: Text("Add Card"),
+              ),)
+          ],
         ),
       ),
     );
