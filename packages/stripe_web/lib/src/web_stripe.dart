@@ -249,7 +249,7 @@ class WebStripe extends StripePlatform {
     throw WebUnsupportedError.method('googlePayIsSupported');
   }
 
-
+  @override
   Future<PaymentIntent> retrievePaymentIntent(String clientSecret) async {
     try {
       final paymentMethod = await StripePlatform.instance.retrievePaymentIntent(clientSecret);
